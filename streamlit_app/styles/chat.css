@@ -1,0 +1,109 @@
+/* 아바타 이미지 (둘 다) */
+div[data-testid="stChatMessage"] > img {
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: cover;
+}
+
+/* User 아바타 이미지 */
+div[data-testid="stChatMessage"] > img[alt="user avatar"] {
+  order: 1;
+}
+
+div[data-testid="stChatMessage"] {
+  display: flex;
+  align-items: flex-end;
+  background-color: #dde4fe;
+}
+
+/* 메시지 내용 왼쪽에 배치 */
+div[data-testid="stChatMessage"] > div[data-testid="stChatMessageContent"] {
+  order: 0; /* 메시지를 왼쪽에 배치 - User만 */
+  margin-right: 20px; /* 아바타와 텍스트 사이 간격 */
+  margin-left: 20px;
+}
+
+/* assistant 메시지 스타일 */
+div[data-testid="stChatMessageContent"][aria-label="Chat message from assistant"] {
+  background-color: #dde4fe;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: auto;
+  word-wrap: break-word;
+  max-width: 100%;
+  justify-content: center; /* 오타 보정 */
+  color: #000000;
+}
+
+/* User 메시지 스타일 */
+div[data-testid="stChatMessageContent"][aria-label="Chat message from user"] {
+  background-color: #c0c9ea;
+  padding: 10px 25px;
+  border-radius: 20px 7px 20px 20px;
+  width: auto;
+  word-wrap: break-word;
+  width: 100%;
+  justify-content: center;
+  color: #000000;
+}
+
+/* 채팅 입력창 스타일 */
+/* 입력창 배경 */
+div [class="st-emotion-cache-128upt6 ea3mdgi6"] {
+  background-color: #dde4fe !important;
+}
+div [class="st-emotion-cache-hzygls ea3mdgi6"] {
+  background-color: #dde4fe !important;
+}
+
+div [data-baseweb="base-input"] {
+  background-color: white !important;
+  height: 100px;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+div [data-baseweb="textarea"] {
+  width: 100%;
+  background-color: white !important;
+  border-radius: 20px;
+}
+
+div [data-testid="stChatInput"] {
+  background-color: #dde4fe;
+}
+
+div [data-testid="stChatInput"] {
+  width: 100%;
+  border-radius: 20px;
+  border: 0.8px solid #d2d4db;
+}
+
+[data-testid="stBottomBlockContainer"]
+  [data-testid="stElementContainer"]:has(> [data-testid="stChatInput"]) {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* User 아바타 숨기기 */
+div[data-testid="stChatMessage"] > img[alt="user avatar"] {
+  display: none !important;
+}
+
+/* User 메시지에서 아바타가 사라진 만큼 왼쪽 여백 제거 */
+div[data-testid="stChatMessageContent"][aria-label="Chat message from user"] {
+  margin-left: 0 !important;
+}
+
+[data-testid="stAppViewContainer"] {
+  padding-left: 170px !important;
+  padding-right: 170px !important;
+}
+
+/* 텍스트박스 클릭(포커스) 시 강조색 변경 */
+div[data-baseweb="textarea"]:focus-within {
+  border: 0.8px solid #c0c9ea !important; /* 원하는 강조 색상 */
+  box-shadow: 0 0 3px rgba(78, 106, 243, 0.4); /* 은은한 효과 */
+  border-radius: 20px !important; /* 기존 모서리 유지 */
+}

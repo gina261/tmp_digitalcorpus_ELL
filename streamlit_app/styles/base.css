@@ -1,0 +1,59 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+/* 전체 배경 톤 */
+:root {
+  --bg: #dde4fe; /* 배경 느낌 */
+  --ink: #0b0c0c; /* 본문 텍스트 */
+  --sub: #5a6b78; /* 보조 텍스트 */
+  --brand: #2f7d8a; /* 버튼/포커스 */
+  --user: #f2fbff; /* 사용자 말풍선 */
+  --bot: #ffffff; /* 봇 말풍선 */
+  --border: #e7ecef; /* 카드/버블 경계 */
+}
+html,
+body,
+[data-testid="stAppViewContainer"] {
+  background: var(--bg);
+  font-family: "Pretendard", sans-serif !important;
+  color: var(--ink);
+}
+
+/* Streamlit 기본 헤더 투명 처리 */
+header[data-testid="stHeader"] {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 기본 텍스트 스타일 */
+body,
+p,
+span,
+div {
+  font-family: "Pretendard", sans-serif !important;
+  font-weight: 400; /* 일반 본문은 기본 두께 */
+  color: var(--ink);
+}
+
+/* 제목 계층별 폰트 크기 & 얇은 두께 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Pretendard", sans-serif !important;
+  color: var(--ink);
+  font-weight: 300; /* 얇은 두께 */
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+/* 크기 미세 조정 */
+h1 {
+  font-size: clamp(32px, 4vw, 44px);
+}
+h2 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+h3 {
+  font-size: clamp(20px, 2.5vw, 28px);
+}
