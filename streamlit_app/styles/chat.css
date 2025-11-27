@@ -107,7 +107,3 @@ div[data-baseweb="textarea"]:focus-within {
   box-shadow: 0 0 3px rgba(78, 106, 243, 0.4); /* 은은한 효과 */
   border-radius: 20px !important; /* 기존 모서리 유지 */
 }
-
-div[class="st-emotion-cache-128upt6 e4man113"] {
-  background-color: #d2d4db !important;
-}
