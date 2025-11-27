@@ -2,7 +2,18 @@ import streamlit as st
 from streamlit_app.styles.utils import inject_css, inject_css_bundle
 import time
 from streamlit_app.utils.spellchecker_func import *
+import nltk
 
+# NLTK 데이터 다운로드 (punkt_tab 및 punkt)
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
 
 # ============== 페이지 설정 ==============
