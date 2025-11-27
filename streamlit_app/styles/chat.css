@@ -108,6 +108,6 @@ div[data-baseweb="textarea"]:focus-within {
   border-radius: 20px !important; /* 기존 모서리 유지 */
 }
 
-div[data-testid="stBottomBlockContainer"][class="st-emotion-cache-1y34ygi"] {
-  background: #d2d4db !important;
+div[class="st-emotion-cache-128upt6 e4man113"] {
+  background-color: #d2d4db !important;
 }
