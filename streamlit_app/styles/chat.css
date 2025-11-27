@@ -84,6 +84,7 @@ div [data-testid="stChatInput"] {
   [data-testid="stElementContainer"]:has(> [data-testid="stChatInput"]) {
   display: flex !important;
   justify-content: center !important;
+  background-color: #dde4fe !important;
 }
 
 /* User 아바타 숨기기 */
